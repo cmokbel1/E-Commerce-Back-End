@@ -12,6 +12,6 @@ app.use(require('./routes'))
 // sync sequelize models to the database, then turn on the server
 
 async function init() {
-  await require('./db').sync()
+  await require('./config').sync()
   app.listen(process.env.PORT || 3000)
 }
